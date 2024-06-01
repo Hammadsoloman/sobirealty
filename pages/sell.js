@@ -1,7 +1,10 @@
-import React from 'react'
-
+import Hero from "@/components/sell/Hero"
+import Properties from "@/components/home/Properties"
 export default function SellPage() {
   return (
-    <div>SellPage</div>
+   <>
+   <Hero/>
+   <Properties/>
+    </>
   )
 }

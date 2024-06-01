@@ -27,7 +27,7 @@ export default function Hero() {
       <Box
         as="header"
         pos={"relative"}
-        h={"100vh"}
+       // h={"100vh"}
         color={"white"}
         overflow={"hidden"}
         borderTopRadius={"50px"}

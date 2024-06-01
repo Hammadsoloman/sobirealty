@@ -15,9 +15,9 @@ import {
 } from "@chakra-ui/react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-
 import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 import Image from "next/image";
+import Paragraph from "../global/Paragraph";
 
 export default function Hero() {
   return (
@@ -49,13 +49,25 @@ export default function Hero() {
         align={"center"}
       >
         <Heading as={"h1"} fontSize={"6xl"} textAlign={"center"}>
-          Your New Home <br />
-          Awaits
+          Sell With The Best
         </Heading>
-
-        <Button colorScheme={"blue"} borderRadius={"3xl"} size={"lg"} mt={5} rightIcon={<MdKeyboardArrowDown/>} >
-          Explore Our Properties
-        </Button>
+        <Paragraph>
+          Receive a free home valuation from one of our property experts.
+        </Paragraph>
+        <HStack
+          bg={"white"}
+          color={"black"}
+          px={10}
+          py={5}
+          borderRadius={"50px"}
+          mt={10}
+          spacing={5}
+        >
+          <Input placeholder="Enter your home address" />
+          <Button colorScheme={"blue"} borderRadius={"3xl"} size={"lg"} mt={5}>
+            Continue
+          </Button>
+        </HStack>
       </VStack>
     </Box>
   );

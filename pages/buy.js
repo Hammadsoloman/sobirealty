@@ -1,6 +1,6 @@
-import Hero from "@/components/buy/hero";
+import Hero from "@/components/buy/Hero";
 import ContactUs from "@/components/home/ContactUs";
-import Properties from "@/components/home/Properties";
+import AllProperties from "@/components/buy/AllProperties";
 import Regions from "@/components/home/Regions";
 import React from "react";
 
@@ -9,7 +9,7 @@ export default function BuyPage() {
     <>
       <Hero />
       <Regions />
-      <Properties />
+      <AllProperties />
       <ContactUs />
     </>
   );
