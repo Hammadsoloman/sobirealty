@@ -13,6 +13,7 @@ import {
 export default function ContactUs() {
   return (
     <SimpleGrid
+    id="contact-us"
       as={"section"}
       p={24}
       columns={2}

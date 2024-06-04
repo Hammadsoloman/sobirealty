@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
           }
           .stickyElem {
             transition: all 1s ease;
+            height: 100%;
           }
           .zoom {
             transition: all 1s ease;

@@ -58,12 +58,13 @@ export default function Hero() {
           bg={"white"}
           color={"black"}
           px={10}
-          py={5}
+          pb={3}
           borderRadius={"50px"}
-          mt={10}
+         // mt={10}
           spacing={5}
+          align={"baseline"}
         >
-          <Input placeholder="Enter your home address" />
+          <Input placeholder="Enter your home address" size={"lg"} />
           <Button colorScheme={"blue"} borderRadius={"3xl"} size={"lg"} mt={5}>
             Continue
           </Button>

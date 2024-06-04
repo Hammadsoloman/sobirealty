@@ -5,18 +5,36 @@ import {
   HStack,
   List,
   ListItem,
+  SimpleGrid,
   Text,
   UnorderedList,
+  VStack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import Sticky from "react-stickynode";
 import { FaSearch } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
+
 import { throttle } from "lodash";
 import { SlMenu } from "react-icons/sl";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
+import Background from "@/public/assets/bg1.png";
 export default function Nav() {
   const router = useRouter();
+  const BreakpointValue = useBreakpointValue(
+    {
+      base: "base",
+      lg: "lg",
+    },
+    {
+      // Breakpoint to use when mediaqueries cannot be used, such as in server-side rendering
+      // (Defaults to 'base')
+      fallback: "lg",
+    }
+  );
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [isEnabled, setIsEnabled] = useState(true);
   useEffect(() => {
     console.log(router);
@@ -55,49 +73,76 @@ export default function Nav() {
         <Box pos={"absolute"} top={0} left={0} w={"98.9vw"} overflow={"hidden"}>
           <Sticky
             enabled={true}
-            top={isSticky ? 30 : 80}
+            top={isSticky || !isCollapsed ? 30 : 80}
             innerZ={2}
             innerActiveClass={"stickyElem"}
           >
-            <HStack
-              as="nav"
-              justify={"space-between"}
+            <Box
+              h={isCollapsed ? "5rem" : "90vh"}
               px={16}
-              py={isSticky ? 4 : 0}
+              py={isSticky || !isCollapsed ? 4 : 0}
               fontWeight={"bold"}
-              color={isSticky ? "black" : "white"}
+              color={isSticky || !isCollapsed ? "black" : "white"}
               w={isSticky ? "95vw" : "full"}
-              bg={isSticky ? "white" : "transparent"}
+              bg={isSticky || !isCollapsed ? "white" : "transparent"}
               borderRadius={"50px"}
               mx={"auto"}
               boxShadow={isSticky ? "lg" : "none"}
+              overflow={"hidden"}
             >
-              <Text fontSize={"3xl"}>SOBIREALTY</Text>
-              <HStack spacing={5}>
-                <Link href={"/buy"}>Buy</Link>
-                <Link href={"/sell"}>Sell</Link>
-                <Link href={"/become-an-agent"}>Agent</Link>
-                <Link href={"/"}>1-8777-SOBIREALTY</Link>
-                <Button
-                  as={Link}
-                  href={"/home-search"}
-                  rounded="3xl"
-                  rightIcon={<FaSearch />}
-                  colorScheme={isSticky ? "blue" : "gray"}
-                >
-                  Find a Home
-                </Button>
-                <Button
-                  rounded="3xl"
-                  rightIcon={<SlMenu />}
-                  variant={"outline"}
-                  color={isSticky ? "black" : "white"}
-                  _hover={{ color: isSticky ? "black" : "white" }}
-                >
-                  Menu
-                </Button>
+              <HStack as="nav" justify={"space-between"} align={"flex-start"}>
+                <Text fontSize={"3xl"}>SOBIREALTY</Text>
+                <HStack spacing={5}>
+                  {isCollapsed && BreakpointValue==="lg" && (
+                    <>
+                      <Link href={"/buy"}>Buy</Link>
+                      <Link href={"/sell"}>Sell</Link>
+                      <Link href={"/become-an-agent"}>Join Us</Link>
+                    </>
+                  )}
+                  <Link href={"/"}>1-8777-SOBIREALTY</Link>
+                  <Button
+                    as={Link}
+                    href={"/home-search"}
+                    rounded="3xl"
+                    rightIcon={<FaSearch />}
+                    colorScheme={isSticky ? "blue" : "gray"}
+                  >
+                    Find a Home
+                  </Button>
+                  <Button
+                    rounded="3xl"
+                    rightIcon={isCollapsed ? <SlMenu /> : <MdClose />}
+                    variant={"outline"}
+                    color={isSticky || !isCollapsed ? "black" : "white"}
+                    _hover={{
+                      color: isSticky || !isCollapsed ? "black" : "white",
+                    }}
+                    onClick={() => setIsCollapsed(!isCollapsed)}
+                  >
+                    {isCollapsed ? "Menu" : ""}
+                  </Button>
+                </HStack>
               </HStack>
-            </HStack>
+              {!isCollapsed && (
+                <SimpleGrid columns={2}>
+                  <Box pr={16}>
+                    <Image src={Background} alt="" />
+                  </Box>
+                  <VStack
+                    justify={"center"}
+                    align={"flex-start"}
+                    pl={20}
+                    fontSize={"5xl"}
+                  >
+                    <Link href={"/buy"}>Buy</Link>
+                    <Link href={"/sell"}>Sell</Link>
+                    <Link href={"/become-an-agent"}>Join Us</Link>
+                    <Link href={"/#contact-us"}>Contact Us</Link>
+                  </VStack>
+                </SimpleGrid>
+              )}
+            </Box>
           </Sticky>
         </Box>
       ) : (
@@ -118,7 +163,7 @@ export default function Nav() {
           <HStack spacing={5}>
             <Link href={"/buy"}>Buy</Link>
             <Link href={"/sell"}>Sell</Link>
-            <Link href={"/become-an-agent"}>Agent</Link>
+            <Link href={"/become-an-agent"}>Join Us</Link>
             <Link href={"/"}>1-8777-SOBIREALTY</Link>
             <Button
               as={Link}

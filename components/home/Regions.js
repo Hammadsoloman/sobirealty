@@ -18,7 +18,7 @@ import { useState } from "react";
 
 export default function Regions() {
   const [backgroundImage, setBackgroundImage] = useState("");
- 
+
   return (
     <Box
       as="section"
