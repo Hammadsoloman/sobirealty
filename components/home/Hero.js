@@ -45,8 +45,8 @@ export default function Hero() {
           <source src={"/assets/backgroundvideo.mp4"} type="video/mp4" />
         </Box>
 
-        <Box zIndex={-1} width={"100%"} display={{ md: "block", md: "none" }}>
-          <Image src={HeroBackgroundImage} alt="" />
+        <Box zIndex={-1} width={"100%"} h={"70vh"} display={{ md: "block", md: "none" }}>
+          <Image src={HeroBackgroundImage} alt="" style={{minHeight:"100%"}}  />
         </Box>
         <Box
           pos={"absolute"}
@@ -65,6 +65,7 @@ export default function Hero() {
           justify={"center"}
           align={"center"}
           pb={10}
+          
         >
           <Heading
             as={"h1"}

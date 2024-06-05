@@ -11,10 +11,20 @@ import {
   UnorderedList,
   VStack,
   useBreakpointValue,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
 } from "@chakra-ui/react";
 import Sticky from "react-stickynode";
 import { FaSearch } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import { BiSolidDownArrow } from "react-icons/bi";
+
 
 import { throttle } from "lodash";
 import { SlMenu } from "react-icons/sl";
@@ -100,7 +110,27 @@ export default function Nav() {
               <>
                 <Link href={"/buy"}>Buy</Link>
                 <Link href={"/sell"}>Sell</Link>
-                <Link href={"/become-an-agent"}>Join Us</Link>
+
+                <Menu flip={false}>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<BiSolidDownArrow />}
+                    variant={"unstyled"}
+                  >
+                    Agent
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem
+                      as={Link}
+                      href={"/become-an-agent"}
+                      color={"black"}
+                    >
+                      Join Us
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+                <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
+                <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
               </>
             )}
             <Link href={"/"}>1-8777-SOBIREALTY</Link>
@@ -199,6 +229,8 @@ export default function Nav() {
               <Link href={"/buy"}>Buy</Link>
               <Link href={"/sell"}>Sell</Link>
               <Link href={"/become-an-agent"}>Join Us</Link>
+              <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
+                <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
               <Link href={"/#contact-us"}>Contact Us</Link>
             </VStack>
           </SimpleGrid>

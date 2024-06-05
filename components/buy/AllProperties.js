@@ -21,6 +21,7 @@ import {
   RangeSliderTrack,
   RangeSliderFilledTrack,
   RangeSliderThumb,
+  VStack,
 } from "@chakra-ui/react";
 import Heading2 from "../global/Heading2";
 import { LuCode } from "react-icons/lu";
@@ -35,8 +36,20 @@ export default function AllProperties() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   return (
-    <Box as={"section"} p={{ base: 4, md: 24 }}>
-      <HStack justify={"space-between"}>
+    <Box as="section">
+      <Heading2>Featured Properties</Heading2>
+      <Box  h={10}/>
+      <Box h={"100vh"}>
+        <iframe
+          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ee201aac"
+          allowfullscreen
+          width="100%"
+          height="100%"
+          frameborder="0"
+          marginwidth="0"
+          marginheight="0"
+        />
+        {/* <HStack justify={"space-between"}>
         <Heading2>Featured Properties</Heading2>
 
         <OutlineButton title={"Filters"} icon={<FaFilter />} onClick={onOpen} />
@@ -143,7 +156,8 @@ export default function AllProperties() {
             <Button colorScheme="blue">Filter</Button>
           </DrawerFooter>
         </DrawerContent>
-      </Drawer>
+              </Drawer>*/}
+      </Box>
     </Box>
   );
 }
