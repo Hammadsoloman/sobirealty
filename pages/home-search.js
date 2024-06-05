@@ -1,4 +1,12 @@
-import { Box, Button, HStack, Input, Select, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Input,
+  Select,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react";
 import properties from "@/data/properties";
 import Link from "next/link";
@@ -15,8 +23,17 @@ export default function HomeSearch() {
     zoom: 11,
   };
   return (
-    <Box as="main">
-      <HStack spacing={4} p={4} >
+    <Box as="main" h={"100vh"}>
+      <iframe
+        src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ee201aac"
+        allowfullscreen
+        width="100%"
+        height="100%"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+      />
+      {/* <HStack spacing={4} p={4} >
         <Input placeholder="Address, City, Neighborhood, Zip Code" />
         <Select placeholder="Any Price">
           <option>13266</option>
@@ -96,7 +113,7 @@ export default function HomeSearch() {
             />
           </GoogleMapReact>
         </Box>
-      </SimpleGrid>
+          </SimpleGrid>*/}
     </Box>
   );
 }
