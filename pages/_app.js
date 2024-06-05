@@ -1,6 +1,7 @@
 // pages/_app.js
 import { ChakraProvider } from "@chakra-ui/react";
 import { fonts } from "@/lib/fonts";
+import { theme } from "@/lib/theme";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -14,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           }
           .stickyElem {
             transition: all 1s ease;
-            height: 100%;
+           
           }
           .zoom {
             transition: all 1s ease;
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }) {
           }
         `}
       </style>
-      <ChakraProvider>
+      <ChakraProvider  theme={theme}>
         <Nav />
         <Component {...pageProps} />
         <Footer />

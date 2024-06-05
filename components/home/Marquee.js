@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Stack, Text } from "@chakra-ui/react";
 import Marquee from "react-fast-marquee";
 
 import businessInsider from "../../public/assets/logos/business-insider.png";
@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export default function Marquees() {
   return (
-    <HStack as="section" bg={"gray.100"} pl={24} pt={24} pb={24}>
+    <Stack  as="section" direction={{base:"column",md:"row"}}  bg={"gray.100"} pl={{base:4,md:24}} pt={{base:4,md:24}} pb={{base:4,md:24}}>
       <Text whiteSpace={"nowrap"} fontWeight={"bold"} fontSize={"sm"} >
         FEATURED IN
       </Text>
@@ -72,6 +72,6 @@ export default function Marquees() {
           style={{ maxWidth: 150, padding: "0 20px" }}
         />
       </Marquee>
-    </HStack>
+    </Stack>
   );
 }

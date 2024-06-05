@@ -18,6 +18,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 import Image from "next/image";
+import PrimaryButton from "../global/PrimaryButton";
 
 export default function Hero() {
   return (
@@ -28,8 +29,8 @@ export default function Hero() {
       color={"white"}
       overflow={"hidden"}
     >
-      <Box id="backgroundVideo" zIndex={-1} width={"100%"}>
-        <Image src={HeroBackgroundImage} alt="" />
+      <Box  zIndex={-1} width={"100vw"}>
+        <Image src={HeroBackgroundImage} alt="" style={{minWidth:"100%"}} />
       </Box>
       <Box
         pos={"absolute"}
@@ -48,14 +49,11 @@ export default function Hero() {
         justify={"center"}
         align={"center"}
       >
-        <Heading as={"h1"} fontSize={"6xl"} textAlign={"center"}>
+        <Heading as={"h1"}    fontSize={{ base: "4xl", md: "6xl" }} textAlign={"center"}>
           Your New Home <br />
           Awaits
         </Heading>
-
-        <Button colorScheme={"blue"} borderRadius={"3xl"} size={"lg"} mt={5} rightIcon={<MdKeyboardArrowDown/>} >
-          Explore Our Properties
-        </Button>
+        <PrimaryButton title={" Explore Our Properties"} icon={<MdKeyboardArrowDown />} />
       </VStack>
     </Box>
   );

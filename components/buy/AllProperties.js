@@ -29,29 +29,24 @@ import Link from "next/link";
 import { FaFilter } from "react-icons/fa";
 import { useRef } from "react";
 import { Beds, Baths } from "@/lib/filters";
+import OutlineButton from "../global/OutlineButton";
 
 export default function AllProperties() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   return (
-    <Box as={"section"} p={24}>
+    <Box as={"section"} p={{ base: 4, md: 24 }}>
       <HStack justify={"space-between"}>
         <Heading2>Featured Properties</Heading2>
-        <Button
-          variant={"outline"}
-          colorScheme={"blue"}
-          borderRadius={"3xl"}
-          size={"lg"}
-          mt={5}
-          rightIcon={<FaFilter />}
-          ref={btnRef}
-          onClick={onOpen}
-        >
-          Filters
-        </Button>
+
+        <OutlineButton title={"Filters"} icon={<FaFilter />} onClick={onOpen} />
       </HStack>
 
-      <SimpleGrid columns={3} spacing={10} mt={20}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 3 }}
+        spacing={{ base: 4, md: 10 }}
+        mt={{ base: 4, md: 20 }}
+      >
         {properties
           .filter((property) => property.isFeatured)
           .map((property, idx) => (
@@ -133,10 +128,10 @@ export default function AllProperties() {
                 <RangeSliderFilledTrack bg="tomato" />
               </RangeSliderTrack>
               <RangeSliderThumb boxSize={6} index={0}>
-                <Box color="tomato" as={LuCode } />
+                <Box color="tomato" as={LuCode} />
               </RangeSliderThumb>
               <RangeSliderThumb boxSize={6} index={1}>
-                <Box color="tomato" as={LuCode } />
+                <Box color="tomato" as={LuCode} />
               </RangeSliderThumb>
             </RangeSlider>
           </DrawerBody>

@@ -9,14 +9,15 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
+import PrimaryButton from "../global/PrimaryButton";
 
 export default function ContactUs() {
   return (
     <SimpleGrid
     id="contact-us"
       as={"section"}
-      p={24}
-      columns={2}
+      columns={{ base: 1, md: 2 }}
+      p={{base:4,md:24}}
       bg={"#131176"}
       color={"white"}
     >
@@ -29,7 +30,8 @@ export default function ContactUs() {
         as={"form"}
         bg={"white"}
         borderRadius={"lg"}
-        p={20}
+        
+        p={{base:4,md:20}}
         spacing={10}
         color={"black"}
         maxW={700}
@@ -53,15 +55,7 @@ export default function ContactUs() {
           any time. To opt out from emails, you can click on the unsubscribe
           link in the emails. Message and data rates may apply.
         </Checkbox>
-        <Button
-          type="submit"
-          colorScheme={"blue"}
-          borderRadius={"3xl"}
-          size={"lg"}
-          mt={5}
-        >
-          Submit
-        </Button>
+       <PrimaryButton title={"Contact Us"} />
       </VStack>
     </SimpleGrid>
   );

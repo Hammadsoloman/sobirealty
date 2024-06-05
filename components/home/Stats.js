@@ -14,8 +14,15 @@ import Background from "@/public/assets/bg1.png";
 import Image from "next/image";
 export default function Stats() {
   return (
-    <SimpleGrid as={"section"} columns={2}  p={24}>
-      <VStack align={"flex-start"} spacing={10} >
+    <SimpleGrid as={"section"}    columns={{ base: 1, md: 2 }}  p={{base:0,md:24}} style={{
+      backgroundImage: `url(/assets/bg1.png)`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right center",
+      backgroundSize: "contain",
+    }}>
+      <VStack  justify={"flex-start"}
+        align={"flex-start"}
+        justifyContent={"center"} spacing={{base:4,md:10}} >
         <Text fontWeight={"bold"} >GLOBAL REACH</Text>
         <Heading2>
           Gain Access to the Best Network in the World
@@ -45,9 +52,7 @@ export default function Stats() {
           </Stat>
         </SimpleGrid>
       </VStack>
-      <Box pl={16} >
-        <Image src={Background} alt="" />
-      </Box>
+      <Box display={{ base: "none", md: "block" }} />
     </SimpleGrid>
   );
 }

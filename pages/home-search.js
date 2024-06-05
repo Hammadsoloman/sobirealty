@@ -32,8 +32,8 @@ export default function HomeSearch() {
         </Select>{" "}
       
       </HStack>
-      <SimpleGrid columns={2}>
-        <SimpleGrid columns={2} spacing={10} height={"80vh"} overflow={"auto"}>
+      <SimpleGrid columns={{base:1,lg:2}}>
+        <SimpleGrid columns={{base:1,lg:2}} spacing={10} height={"80vh"} overflow={"auto"}>
           {properties.map((property, idx) => (
             <Link key={idx} href={"/"}>
               <Box>
@@ -83,7 +83,7 @@ export default function HomeSearch() {
             </Link>
           ))}
         </SimpleGrid>
-        <Box w={"100%"} height={"80vh"}>
+        <Box display={{base:"none",lg:"block"}} w={"100%"} height={"80vh"}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: "" }}
             defaultCenter={defaultProps.center}

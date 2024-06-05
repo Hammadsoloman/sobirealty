@@ -12,20 +12,25 @@ import Heading2 from "../global/Heading2";
 import Paragraph from "../global/Paragraph";
 import Link from "next/link";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import PrimaryButton from "../global/PrimaryButton";
 
 export default function Properties() {
   return (
-    <Box as={"section"} p={24}>
+    <Box as={"section"} p={{ base: 4, md: 24 }}>
       <Heading2>Featured Properties</Heading2>
       <Paragraph>
         Check out some of our most exclusive houses, apartments, townhomes,
         penthouses, and more.
       </Paragraph>
-      <SimpleGrid columns={3} spacing={10} mt={20}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 3 }}
+        spacing={{ base: 4, md: 10 }}
+        mt={{ base: 5, md: 20 }}
+      >
         {properties
           .filter((property) => property.isFeatured)
           .map((property, idx) => (
-            <Link key={idx} href={"/"}  >
+            <Link key={idx} href={"/"}>
               <Box>
                 <Box pos={"relative"} borderRadius={"md"} overflow={"hidden"}>
                   <Image
@@ -73,16 +78,7 @@ export default function Properties() {
             </Link>
           ))}
       </SimpleGrid>
-      <Button
-        colorScheme={"blue"}
-        borderRadius={"3xl"}
-        size={"lg"}
-        mt={5}
-        rightIcon={<MdOutlineArrowForwardIos />}
-      >
-        View More
-      </Button>
-     
+      <PrimaryButton title={"View More"} icon={<MdOutlineArrowForwardIos />} />
     </Box>
   );
 }

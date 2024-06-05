@@ -18,6 +18,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 import Image from "next/image";
 import Paragraph from "../global/Paragraph";
+import PrimaryButton from "../global/PrimaryButton";
 
 export default function Hero() {
   return (
@@ -29,7 +30,7 @@ export default function Hero() {
       overflow={"hidden"}
     >
       <Box id="backgroundVideo" zIndex={-1} width={"100%"}>
-        <Image src={HeroBackgroundImage} alt="" />
+        <Image src={HeroBackgroundImage} alt="" style={{ minWidth: "100%" }} />
       </Box>
       <Box
         pos={"absolute"}
@@ -48,26 +49,29 @@ export default function Hero() {
         justify={"center"}
         align={"center"}
       >
-        <Heading as={"h1"} fontSize={"6xl"} textAlign={"center"}>
+        <Heading
+          as={"h1"}
+          fontSize={{ base: "4xl", md: "6xl" }}
+          textAlign={"center"}
+        >
           Sell With The Best
         </Heading>
-        <Paragraph>
+        <Paragraph color="white" isCentred>
           Receive a free home valuation from one of our property experts.
         </Paragraph>
         <HStack
           bg={"white"}
           color={"black"}
           px={10}
-          pb={3}
+          py={3}
           borderRadius={"50px"}
-         // mt={10}
+          // mt={10}
           spacing={5}
           align={"baseline"}
         >
-          <Input placeholder="Enter your home address" size={"lg"} />
-          <Button colorScheme={"blue"} borderRadius={"3xl"} size={"lg"} mt={5}>
-            Continue
-          </Button>
+          <Input placeholder="Enter your home address" size={"md"} />
+
+          <PrimaryButton title={"Continue"} />
         </HStack>
       </VStack>
     </Box>
