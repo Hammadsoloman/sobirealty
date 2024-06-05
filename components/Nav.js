@@ -25,7 +25,6 @@ import { FaSearch } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { BiSolidDownArrow } from "react-icons/bi";
 
-
 import { throttle } from "lodash";
 import { SlMenu } from "react-icons/sl";
 import { useEffect, useMemo, useState } from "react";
@@ -230,7 +229,7 @@ export default function Nav() {
               <Link href={"/sell"}>Sell</Link>
               <Link href={"/become-an-agent"}>Join Us</Link>
               <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
-                <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
+              <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
               <Link href={"/#contact-us"}>Contact Us</Link>
             </VStack>
           </SimpleGrid>
@@ -241,7 +240,13 @@ export default function Nav() {
   return (
     <>
       {isEnabled ? (
-        <Box pos={"absolute"} top={0} left={0} w={"98.9vw"} overflow={"hidden"}>
+        <Box
+          pos={"absolute"}
+          top={0}
+          left={0}
+          w={{ base: "94vw", md: "95vw", lg: "98vw" }}
+          overflow={"hidden"}
+        >
           <Sticky
             enabled={true}
             top={isSticky || !isCollapsed ? 30 : 80}

@@ -31,22 +31,14 @@ export default function Hero() {
   return (
     <Box
       as="header"
+      h="100vh"
+      backgroundImage={"url(/assets/court.jpg)"}
+      backgroundPosition={"center"}
+      backgroundRepeat={"no-repeat"}
+      backgroundSize={"cover"}
       pos={"relative"}
-    //  minH={{ base: "100vh", lg: "70vh" }}
-      color={"white"}
-      overflow={"hidden"}
     >
-      <Box zIndex={-1} width={"100vw"}>
-        <Image src={HeroBackgroundImage} alt="" style={{ minWidth: "100%",minHeight:"100%" }} />
-      </Box>
-      <Box
-        pos={"absolute"}
-        top={0}
-        left={0}
-        w={"full"}
-        h={"full"}
-        bg={"rgba(0,0,0,0.4)"}
-      />
+      <Box w={"full"} h={"full"} bg={"rgba(0,0,0,0.4)"}  />
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         pos={"absolute"}
@@ -55,8 +47,9 @@ export default function Hero() {
         w={"full"}
         h={"full"}
         pt={40}
+        color={"white"}
       >
-        <VStack h={"100%"} justify={"space-between"} py={10} align={"center"}>
+        <VStack h={"100%"} justify={"center"}  align={"center"}>
           <Heading
             as={"h1"}
             fontSize={{ base: "4xl", md: "6xl" }}
@@ -70,6 +63,7 @@ export default function Hero() {
             icon={<MdKeyboardArrowDown />}
           />
         </VStack>
+        <VStack h={"100%"} justify={"center"} align={"center"}>
         <VStack
           as={"form"}
           bg={"white"}
@@ -80,6 +74,7 @@ export default function Hero() {
           p={10}
           h={"min-content"}
           mx={"auto"}
+          
         >
           <Heading2>Start Your Property Tax Evaluation</Heading2>
           <FormControl>
@@ -98,7 +93,7 @@ export default function Hero() {
             <Input type="email" />
           </FormControl>
           <OutlineButton title={"Search For Saving"} />
-        </VStack>
+        </VStack></VStack>
       </SimpleGrid>
     </Box>
   );
