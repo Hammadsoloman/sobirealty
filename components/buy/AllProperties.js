@@ -31,6 +31,7 @@ import { FaFilter } from "react-icons/fa";
 import { useRef } from "react";
 import { Beds, Baths } from "@/lib/filters";
 import OutlineButton from "../global/OutlineButton";
+import IDX from "../global/IDX";
 
 export default function AllProperties() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,18 +39,10 @@ export default function AllProperties() {
   return (
     <Box as="section">
       <Heading2>Featured Properties</Heading2>
-      <Box  h={10}/>
-      <Box h={"100vh"}>
-        <iframe
-          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ee201aac"
-          allowfullscreen
-          width="100%"
-          height="100%"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-        />
-        {/* <HStack justify={"space-between"}>
+      <Box h={10} />
+
+      <IDX />
+      {/* <HStack justify={"space-between"}>
         <Heading2>Featured Properties</Heading2>
 
         <OutlineButton title={"Filters"} icon={<FaFilter />} onClick={onOpen} />
@@ -157,7 +150,6 @@ export default function AllProperties() {
           </DrawerFooter>
         </DrawerContent>
               </Drawer>*/}
-      </Box>
     </Box>
   );
 }

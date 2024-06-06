@@ -115,6 +115,8 @@ export default function Nav() {
                     as={Button}
                     rightIcon={<BiSolidDownArrow />}
                     variant={"unstyled"}
+                    display={"flex"}
+                    fontWeight={"bold"}
                   >
                     Agent
                   </MenuButton>
