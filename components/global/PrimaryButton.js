@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-export default function PrimaryButton({ title, icon }) {
+export default function PrimaryButton({ title, icon,onClick }) {
   return (
     <Button
       rightIcon={icon}
@@ -12,6 +12,7 @@ export default function PrimaryButton({ title, icon }) {
       _hover={{
         bg: "brand.secondary",
       }}
+      onClick={onClick}
     >
       {title}
     </Button>

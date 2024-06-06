@@ -38,9 +38,8 @@ export default function Hero() {
       backgroundSize={"cover"}
       pos={"relative"}
     >
-      <Box w={"full"} h={"full"} bg={"rgba(0,0,0,0.4)"}  />
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
+      <Box w={"full"} h={"full"} bg={"rgba(0,0,0,0.4)"} />
+      <VStack
         pos={"absolute"}
         top={0}
         left={0}
@@ -48,53 +47,22 @@ export default function Hero() {
         h={"full"}
         pt={40}
         color={"white"}
+        justify={"center"}
+        align={"center"}
       >
-        <VStack h={"100%"} justify={"center"}  align={"center"}>
-          <Heading
-            as={"h1"}
-            fontSize={{ base: "4xl", md: "6xl" }}
-            textAlign={"center"}
-          >
-            We only get paid <br />
-            if you get a tax reduction!!
-          </Heading>
-          <PrimaryButton
-            title={"View Sample Report"}
-            icon={<MdKeyboardArrowDown />}
-          />
-        </VStack>
-        <VStack h={"100%"} justify={"center"} align={"center"}>
-        <VStack
-          as={"form"}
-          bg={"white"}
-          boxShadow={"lg"}
-          borderRadius={"md"}
-          color={"black"}
-          maxW={"550px"}
-          p={10}
-          h={"min-content"}
-          mx={"auto"}
-          
+        <Heading
+          as={"h1"}
+          fontSize={{ base: "4xl", md: "6xl" }}
+          textAlign={"center"}
         >
-          <Heading2>Start Your Property Tax Evaluation</Heading2>
-          <FormControl>
-            <FormLabel>County</FormLabel>
-            <Select placeholder="Select country">
-              <option>Florida</option>
-              <option>Kansas</option>
-            </Select>
-          </FormControl>
-          <FormControl>
-            <FormLabel>Address</FormLabel>
-            <Input />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Email</FormLabel>
-            <Input type="email" />
-          </FormControl>
-          <OutlineButton title={"Search For Saving"} />
-        </VStack></VStack>
-      </SimpleGrid>
+          We only get paid <br />
+          if you get a tax reduction!!
+        </Heading>
+        <PrimaryButton
+          title={"View Sample Report"}
+          icon={<MdKeyboardArrowDown />}
+        />
+      </VStack>
     </Box>
   );
 }

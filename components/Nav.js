@@ -130,9 +130,11 @@ export default function Nav() {
                 </Menu>
                 <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
                 <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
+                <Link href={"/contact-us"}>Contact Us</Link>
+                
               </>
             )}
-            <Link href={"/"}>1-8777-SOBIREALTY</Link>
+           {/* <Link href={"/"}>1-8777-SOBIREALTY</Link>*/}
             <Button
               as={Link}
               href={"/home-search"}
@@ -230,7 +232,7 @@ export default function Nav() {
               <Link href={"/become-an-agent"}>Join Us</Link>
               <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
               <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
-              <Link href={"/#contact-us"}>Contact Us</Link>
+              <Link href={"/contact-us"}>Contact Us</Link>
             </VStack>
           </SimpleGrid>
         )}
