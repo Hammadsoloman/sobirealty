@@ -14,7 +14,7 @@ import Background from "@/public/assets/bg1.png";
 import Image from "next/image";
 export default function Stats() {
   return (
-    <SimpleGrid as={"section"}    columns={{ base: 1, md: 2 }}  p={{base:0,md:24}} style={{
+    <SimpleGrid as={"section"}    columns={{ base: 1, md: 2 }}  p={{base:10,md:24}} style={{
       backgroundImage: `url(/assets/bg1.png)`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "right center",

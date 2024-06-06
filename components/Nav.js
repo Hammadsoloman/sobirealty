@@ -253,7 +253,7 @@ export default function Nav() {
         >
           <Sticky
             enabled={true}
-            top={isSticky || !isCollapsed ? 30 : 80}
+            top={isSticky || !isCollapsed ? 25 : 20}
             innerZ={2}
             innerActiveClass={"stickyElem"}
           >

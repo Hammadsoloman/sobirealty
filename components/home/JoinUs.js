@@ -19,7 +19,7 @@ export default function JoinUs() {
     <SimpleGrid
       as={"section"}
       columns={{ base: 1, md: 2 }}
-      p={{base:4,md:24}}
+      p={{base:10,md:24}}
       bg={"gray.100"}
       style={{
         backgroundImage: `url(/assets/bg1.png)`,

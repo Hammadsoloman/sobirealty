@@ -20,17 +20,17 @@ import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 export default function Hero() {
   return (
     <Box bg={"black"} textAlign={"center"}>
-      <Link href={"/"}>
+     {/* <Link href={"/"}>
         <Text color={"white"} p={3}>
           Click Here to Learn How SOBIREALTY, is Making Real Estate SIMPLE
         </Text>
-      </Link>
+  </Link>*/}
       <Box
         as="header"
         pos={"relative"}
         color={"white"}
         overflow={"hidden"}
-        borderTopRadius={"50px"}
+       // borderTopRadius={"50px"}
       >
         <Box
           as="video"
