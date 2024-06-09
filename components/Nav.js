@@ -218,14 +218,14 @@ export default function Nav() {
         </HStack>
         {!isCollapsed && (
           <SimpleGrid columns={2}>
-            <Box pr={{ base: 2, md: 16 }}>
-              <Image src={Background} alt="" />
+            <Box pr={{ base: 2, md: 16 }} pt={5} >
+              <Image src={"/assets/logo.svg"} alt="" width={700} height={500} />
             </Box>
             <VStack
               justify={"center"}
               align={"flex-start"}
               pl={{ base: 2, md: 20 }}
-              fontSize={{ base: "3xl", md: "5xl" }}
+              fontSize={{ base: "xl", md: "5xl" }}
             >
               <Link href={"/buy"}>Buy</Link>
               <Link href={"/sell"}>Sell</Link>
