@@ -166,6 +166,7 @@ export default function Nav() {
               href={"/home-search"}
               display={{ base: "flex", md: "none" }}
               isRound
+              onClick={()=>setIsCollapsed(true)}
             />
             {isCollapsed ? (
               <Button
@@ -227,12 +228,12 @@ export default function Nav() {
               pl={{ base: 2, md: 20 }}
               fontSize={{ base: "xl", md: "5xl" }}
             >
-              <Link href={"/buy"}>Buy</Link>
-              <Link href={"/sell"}>Sell</Link>
-              <Link href={"/become-an-agent"}>Join Us</Link>
-              <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
-              <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
-              <Link href={"/contact-us"}>Contact Us</Link>
+              <Link href={"/buy"} onClick={()=>setIsCollapsed(true)} >Buy</Link>
+              <Link href={"/sell"} onClick={()=>setIsCollapsed(true)}>Sell</Link>
+              <Link href={"/become-an-agent"} onClick={()=>setIsCollapsed(true)}>Join Us</Link>
+              <Link href={"/realtor-ad-litem"} onClick={()=>setIsCollapsed(true)}>Realtor Ad Litem</Link>
+              <Link href={"/property-tax-appeal"} onClick={()=>setIsCollapsed(true)}>Property Tax Appeal</Link>
+              <Link href={"/contact-us"} onClick={()=>setIsCollapsed(true)}>Contact Us</Link>
             </VStack>
           </SimpleGrid>
         )}

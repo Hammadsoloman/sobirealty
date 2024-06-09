@@ -7,7 +7,7 @@ export default function PropertyTaxAppeal() {
   return (
     <>
       <Hero />
-      <Steps/>
+    {/*  <Steps/>*/}
       <FAQs/>
     </>
   );

@@ -26,43 +26,72 @@ import Image from "next/image";
 import PrimaryButton from "../global/PrimaryButton";
 import Heading2 from "../global/Heading2";
 import OutlineButton from "../global/OutlineButton";
+import Steps from "./Steps";
 
 export default function Hero() {
   return (
     <Box
       as="header"
-      h="100vh"
+      // h="100vh"
       backgroundImage={"url(/assets/court.jpg)"}
       backgroundPosition={"center"}
       backgroundRepeat={"no-repeat"}
       backgroundSize={"cover"}
       pos={"relative"}
     >
-      <Box w={"full"} h={"full"} bg={"rgba(0,0,0,0.4)"} />
-      <VStack
+      <Box
+        w={"full"}
+        h={"full"}
+        bg={"rgba(0,0,0,0.4)"}
         pos={"absolute"}
         top={0}
         left={0}
-        w={"full"}
-        h={"full"}
-        pt={40}
-        color={"white"}
-        justify={"center"}
-        align={"center"}
-      >
-        <Heading
-          as={"h1"}
-          fontSize={{ base: "4xl", md: "6xl" }}
-          textAlign={"center"}
+      />
+      <SimpleGrid columns={{ base: 1, md: 2 }} h={"100%"} pb={20}>
+        <VStack
+          w={"full"}
+          h={"full"}
+          pt={40}
+          color={"white"}
+          justify={"center"}
+          align={"center"}
+          zIndex={1}
         >
-          We only get paid <br />
-          if you get a tax reduction!!
-        </Heading>
-        <PrimaryButton
-          title={"View Sample Report"}
-          icon={<MdKeyboardArrowDown />}
-        />
-      </VStack>
+          <Heading
+            as={"h1"}
+            fontSize={{ base: "4xl", md: "6xl" }}
+            textAlign={"center"}
+          >
+            We only get paid <br />
+            if you get a tax reduction!!
+          </Heading>
+          <PrimaryButton
+            title={"View Sample Report"}
+            icon={<MdKeyboardArrowDown />}
+            onClick={() => {
+              const url = "/assets/sample-report.pdf";
+              const a = document.createElement("a");
+              document.body.appendChild(a);
+              a.style = "display: none";
+              a.href = url;
+              a.download = `sample-report.pdf`;
+              a.click();
+              window.URL.revokeObjectURL(url);
+            }}
+          />
+        </VStack>
+        <VStack
+          w={"full"}
+          h={"full"}
+          pt={40}
+          color={"white"}
+          justify={"center"}
+          align={"center"}
+          zIndex={1}
+        >
+          <Steps />
+        </VStack>
+      </SimpleGrid>
     </Box>
   );
 }
