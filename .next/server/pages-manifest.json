@@ -3,7 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/contact-us": "pages/contact-us.js",
-  "/become-an-agent": "pages/become-an-agent.js",
-  "/property-tax-appeal": "pages/property-tax-appeal.js"
+  "/buy": "pages/buy.js"
 }

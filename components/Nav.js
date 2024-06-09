@@ -4,8 +4,6 @@ import {
   Button,
   HStack,
   IconButton,
-  List,
-  ListItem,
   SimpleGrid,
   Text,
   UnorderedList,
@@ -19,6 +17,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  Flex,
 } from "@chakra-ui/react";
 import Sticky from "react-stickynode";
 import { FaSearch } from "react-icons/fa";
@@ -88,7 +87,7 @@ export default function Nav() {
         color={
           notSticky ? "black" : isSticky || !isCollapsed ? "black" : "white"
         }
-        w={isSticky ? "95vw" : "full"}
+        //  w={isSticky ? "95vw" : "full"}
         bg={isSticky || !isCollapsed ? "white" : "transparent"}
         borderRadius={{ base: "20px", md: "50px" }}
         mx={"auto"}
@@ -133,10 +132,9 @@ export default function Nav() {
                 <Link href={"/realtor-ad-litem"}>Realtor Ad Litem</Link>
                 <Link href={"/property-tax-appeal"}>Property Tax Appeal</Link>
                 <Link href={"/contact-us"}>Contact Us</Link>
-                
               </>
             )}
-           {/* <Link href={"/"}>1-8777-SOBIREALTY</Link>*/}
+            {/* <Link href={"/"}>1-8777-SOBIREALTY</Link>*/}
             <Button
               as={Link}
               href={"/home-search"}
@@ -246,9 +244,10 @@ export default function Nav() {
       {isEnabled ? (
         <Box
           pos={"absolute"}
-          top={0}
-          left={0}
+          top={"0"}
+          left={{base:"10px",md: "8px"}}
           w={{ base: "94vw", md: "95vw", lg: "98vw" }}
+          bg={"red"}
           overflow={"hidden"}
         >
           <Sticky

@@ -14,15 +14,15 @@ import Image from "next/image";
 
 export default function Marquees() {
   return (
-    <Stack  as="section" direction={{base:"column",md:"row"}}  bg={"gray.100"} pl={{base:4,md:24}} pt={{base:4,md:24}} pb={{base:4,md:24}}>
-      <Text whiteSpace={"nowrap"} fontWeight={"bold"} fontSize={"sm"} >
+    <Stack  as="section" direction={{base:"column",md:"row"}}  bg={"white"} pl={{base:4,md:24}} pt={{base:4,md:24}} pb={{base:4,md:24}}>
+      <Text whiteSpace={"nowrap"} fontWeight={"bold"} fontSize={"md"} >
         FEATURED IN
       </Text>
       <Marquee
         pauseOnHover
         gradientWidth={200}
         gradient={true}
-        gradientColor={"#EDF2F7"}
+        gradientColor={"#FFF"}
         autoFill
         speed={50}
       >

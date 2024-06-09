@@ -5,16 +5,21 @@ import JoinUs from "@/components/home/JoinUs";
 import Stats from "@/components/home/Stats";
 import Marquees from "@/components/home/Marquee";
 import ContactUs from "@/components/home/ContactUs";
+import RightImage from "@/components/home/RightImage";
+import Services from "@/components/home/Services";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Regions/>
-      <Properties/>
+      <RightImage/>
+      <Services/>
+     {/* <Regions/>
+      <Properties/>*/}
       <JoinUs/>
-      <Stats/>
       <Marquees/>
+      <Stats/>
+   
       <ContactUs/>
     </>
   );

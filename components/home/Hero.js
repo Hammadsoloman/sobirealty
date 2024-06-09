@@ -20,7 +20,7 @@ import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 export default function Hero() {
   return (
     <Box bg={"black"} textAlign={"center"}>
-     {/* <Link href={"/"}>
+      {/* <Link href={"/"}>
         <Text color={"white"} p={3}>
           Click Here to Learn How SOBIREALTY, is Making Real Estate SIMPLE
         </Text>
@@ -30,7 +30,7 @@ export default function Hero() {
         pos={"relative"}
         color={"white"}
         overflow={"hidden"}
-       // borderTopRadius={"50px"}
+        // borderTopRadius={"50px"}
       >
         <Box
           as="video"
@@ -45,8 +45,17 @@ export default function Hero() {
           <source src={"/assets/backgroundvideo.mp4"} type="video/mp4" />
         </Box>
 
-        <Box zIndex={-1} width={"100%"} h={"70vh"} display={{ md: "block", md: "none" }}>
-          <Image src={HeroBackgroundImage} alt="" style={{minHeight:"100%"}}  />
+        <Box
+          zIndex={-1}
+          width={"100%"}
+          h={"70vh"}
+          display={{ md: "block", md: "none" }}
+        >
+          <Image
+            src={HeroBackgroundImage}
+            alt=""
+            style={{ minHeight: "100%" }}
+          />
         </Box>
         <Box
           pos={"absolute"}
@@ -65,21 +74,27 @@ export default function Hero() {
           justify={"center"}
           align={"center"}
           pb={10}
-          
         >
           <Heading
             as={"h1"}
-            fontSize={{ base: "4xl", md: "6xl" }}
+            fontSize={{ base: "5xl", md: "6xl", lg: "9xl" }}
             textAlign={"center"}
           >
-            Make A Move For{" "}
-            <Box as="br" display={{ base: "none", md: "inline" }} />
-            Your Future.
+            SOBI REALTY
           </Heading>
-          <Text fontSize={"xl"} fontWeight={"bold"}>
-            The Most Followed Real Estate Brand in the World.
+          <Text
+            fontSize={{ base: "xl", md: "4xl", lg: "6xl" }}
+            fontWeight={"bold"}
+          >
+            ATTORNEY OWNED & OPERATED
+          </Text>{" "}
+          <Text
+            fontSize={{ base: "xl", md: "4xl", lg: "6xl" }}
+            fontWeight={"bold"}
+          >
+            IN-HOUSE TITLE COMPANY
           </Text>
-          <HStack
+          {/*   <HStack
             bg={"white"}
             color={"black"}
             px={{ base: 4, md: 10 }}
@@ -109,7 +124,7 @@ export default function Hero() {
                 bg: "brand.secondary",
               }}
             />
-          </HStack>
+            </HStack>*/}
         </VStack>
       </Box>
     </Box>
