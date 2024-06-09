@@ -247,7 +247,7 @@ export default function Nav() {
           top={"0"}
           left={{base:"10px",md: "8px"}}
           w={{ base: "94vw", md: "95vw", lg: "98vw" }}
-          bg={"red"}
+    
           overflow={"hidden"}
         >
           <Sticky
