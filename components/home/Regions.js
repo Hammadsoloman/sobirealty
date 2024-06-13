@@ -22,7 +22,8 @@ export default function Regions() {
   return (
     <Box
       as="section"
-      p={{ base: 4, md: 24 }}
+      px={{ base: 4, md: 24 }}
+      py={{ base: 14, md: 48 }}
       bg={"gray.100"}
       overflow={"hidden"}
       borderTopRadius={{ base: "10px", md: "50px" }}

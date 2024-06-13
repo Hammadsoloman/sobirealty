@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <RightImage/>
-      <Services/>
-     {/* <Regions/>
-      <Properties/>*/}
+{/*      <RightImage/>
+      <Services/>*/}
+      <Regions/>
+      <Properties/>
       <JoinUs/>
       <Marquees/>
       <Stats/>

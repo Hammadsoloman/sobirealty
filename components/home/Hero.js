@@ -94,7 +94,7 @@ export default function Hero() {
           >
             IN-HOUSE TITLE COMPANY
           </Text>
-          {/*   <HStack
+          <HStack
             bg={"white"}
             color={"black"}
             px={{ base: 4, md: 10 }}
@@ -107,7 +107,7 @@ export default function Hero() {
               <option value="Buy">Buy</option>
               <option value="Buy">Sell</option>
             </Select>
-            <InputGroup minW={{ base: "60vw", md: "40vw" }}>
+            <InputGroup minW={{ base: "50vw", md: "40vw" }}>
               <Input placeholder="Search by address or area" />
               <InputRightElement>
                 <FiTarget />
@@ -124,7 +124,7 @@ export default function Hero() {
                 bg: "brand.secondary",
               }}
             />
-            </HStack>*/}
+          </HStack>
         </VStack>
       </Box>
     </Box>

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-export default function PrimaryButton({ title, icon,onClick }) {
+export default function PrimaryButton({ title, icon,isDisabled=false,onClick }) {
   return (
     <Button
       rightIcon={icon}
@@ -13,6 +13,7 @@ export default function PrimaryButton({ title, icon,onClick }) {
         bg: "brand.secondary",
       }}
       onClick={onClick}
+      isDisabled={isDisabled}
     >
       {title}
     </Button>

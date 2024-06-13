@@ -24,6 +24,20 @@ import {
 } from "@chakra-ui/react";
 import PrimaryButton from "../global/PrimaryButton";
 import Heading2 from "../global/Heading2";
+import {
+  APIProvider,
+  ControlPosition,
+  MapControl,
+  AdvancedMarker,
+  Map,
+  useMap,
+  useMapsLibrary,
+  useAdvancedMarkerRef,
+  AdvancedMarkerRef,
+} from "@vis.gl/react-google-maps";
+import { useState } from "react";
+import PlaceAutocomplete from "../global/PlaceAutocomplete";
+import { usePlacesWidget } from "react-google-autocomplete";
 
 const steps = [
   {
@@ -45,14 +59,34 @@ export default function Steps() {
     index: 1,
     count: steps.length,
   });
+  const [address, setAddress] = useState(null);
+
+  const { ref } = usePlacesWidget({
+    apiKey: process.env.GOOGLE_MAPS_API_KEY,
+    onPlaceSelected: (place) => {
+      console.log(place);
+
+     // setAddress(place);
+    },
+  });
+
+  console.log(address)
+
   const ActiveStepComponent = () => {
     switch (activeStep) {
       case 1:
         return (
           <VStack w={"100%"} h={"full"} justify={"space-between"}>
             <FormControl>
-              <FormLabel>Address</FormLabel>
-              <Input />
+              <FormLabel placeholder="Address">Address</FormLabel>
+              {/* <PlaceAutocomplete selectedPlace={selectedPlace} onPlaceSelect={setSelectedPlace} />*/}
+              <Input
+           
+                ref={ref}
+              //  value={address?.formatted_address}
+              //  onChange={(e) => setAddress(e.target.value)}
+              />
+              {/* <Input placeholder='Address'/>*/}
             </FormControl>
             <HStack w={"full"} flexDir={"row-reverse"}>
               {/*<PrimaryButton
@@ -62,6 +96,7 @@ export default function Steps() {
               <PrimaryButton
                 title={"Next"}
                 onClick={() => setActiveStep(activeStep + 1)}
+             //   isDisabled={address === null ? true : false}
               />
             </HStack>
           </VStack>
@@ -118,16 +153,19 @@ export default function Steps() {
           <VStack w={"100%"} h={"full"} justify={"space-between"}>
             <Box w={"full"}>
               <FormControl>
-                <FormLabel>Email</FormLabel>
+                <FormLabel placeholder="Email">Email</FormLabel>
                 <Input type="email" />
               </FormControl>
               <FormControl>
-                <FormLabel>Tel</FormLabel>
+                <FormLabel placeholder="Phone number">Tel</FormLabel>
                 <Input type="tel" />
               </FormControl>
               <FormControl>
                 <FormLabel>Best time to call </FormLabel>
-                <Input type="date" />
+                <HStack>
+                  <Input type="date" />
+                  <Input type="time" />
+                </HStack>
               </FormControl>
             </Box>
             <HStack w={"full"} flexDir={"row-reverse"}>
@@ -152,10 +190,10 @@ export default function Steps() {
       zIndex={1}
       p={10}
       borderRadius={"lg"}
-      w={{base:'90vw',md: 400}}
+      w={{ base: "90vw", md: 400 }}
       h={600}
       boxShadow={"lg"}
-      color="brand.black"
+      color="black"
     >
       <Stepper
         index={activeStep}

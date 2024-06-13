@@ -16,7 +16,8 @@ import PrimaryButton from "../global/PrimaryButton";
 
 export default function Properties() {
   return (
-    <Box as={"section"} p={{ base: 4, md: 24 }}>
+    <Box as={"section"}   px={{ base: 4, md: 24 }}
+    py={{ base: 14, md: 32 }}>
       <Heading2>Featured Properties</Heading2>
       <Paragraph>
         Check out some of our most exclusive houses, apartments, townhomes,
@@ -25,7 +26,8 @@ export default function Properties() {
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 3 }}
         spacing={{ base: 4, md: 10 }}
-        mt={{ base: 5, md: 20 }}
+        my={{ base: 5, md: 20 }}
+        pb={5}
       >
         {properties
           .filter((property) => property.isFeatured)
