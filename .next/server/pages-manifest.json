@@ -1,7 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/property-tax-appeal": "pages/property-tax-appeal.js",
-  "/contact-us": "pages/contact-us.js"
+  "/_document": "pages/_document.js",
+  "/realtor-ad-litem": "pages/realtor-ad-litem.js",
+  "/become-an-agent": "pages/become-an-agent.js",
+  "/": "pages/index.js",
+  "/property-tax-appeal": "pages/property-tax-appeal.js"
 }

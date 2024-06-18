@@ -18,7 +18,7 @@ export default function ContactUs() {
       as={"section"}
       columns={{ base: 1, md: 2 }}
       p={{base:4,md:24}}
-      bg={"brand.secondary"}
+      bg={"#00A3EE"}
       color={"white"}
     >
       <VStack justify={"center"}>

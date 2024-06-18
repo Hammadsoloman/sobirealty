@@ -48,10 +48,6 @@ const steps = [
     title: "Choose a Report",
     description: "",
   },
-  {
-    title: "Submit your appeal",
-    description: "",
-  },
 ];
 
 export default function Steps() {
@@ -66,37 +62,42 @@ export default function Steps() {
     onPlaceSelected: (place) => {
       console.log(place);
 
-     // setAddress(place);
+      // setAddress(place);
     },
   });
 
-  console.log(address)
+  console.log(address);
 
   const ActiveStepComponent = () => {
     switch (activeStep) {
       case 1:
         return (
           <VStack w={"100%"} h={"full"} justify={"space-between"}>
-            <FormControl>
-              <FormLabel placeholder="Address">Address</FormLabel>
-              {/* <PlaceAutocomplete selectedPlace={selectedPlace} onPlaceSelect={setSelectedPlace} />*/}
-              <Input
-           
-                ref={ref}
-              //  value={address?.formatted_address}
-              //  onChange={(e) => setAddress(e.target.value)}
-              />
-              {/* <Input placeholder='Address'/>*/}
-            </FormControl>
+            <VStack spacing={4} >
+              <FormControl isRequired >
+                <FormLabel placeholder="Address">Address</FormLabel>
+                <Input ref={ref} />{" "}
+              </FormControl>
+              <FormControl isRequired >
+                <FormLabel placeholder="Email">Email</FormLabel>
+                <Input type="email" />
+              </FormControl>
+              <FormControl isRequired >
+                <FormLabel placeholder="Phone number">Tel</FormLabel>
+                <Input type="tel" />
+              </FormControl>
+              <FormControl isRequired >
+                <FormLabel>Best time to call </FormLabel>
+                <HStack>
+                  <Input type="date" />
+                  <Input type="time" />
+                </HStack>
+              </FormControl>
+            </VStack>
             <HStack w={"full"} flexDir={"row-reverse"}>
-              {/*<PrimaryButton
-                title={"Back"}
-                onClick={() => setActiveStep(activeStep - 1)}
-        />*/}
               <PrimaryButton
                 title={"Next"}
                 onClick={() => setActiveStep(activeStep + 1)}
-             //   isDisabled={address === null ? true : false}
               />
             </HStack>
           </VStack>
@@ -104,22 +105,22 @@ export default function Steps() {
       case 2:
         return (
           <VStack w={"100%"} h={"full"} justify={"space-between"}>
-            <Box w={"full"}>
-              <FormControl>
+            <VStack w={"full"} spacing={4} >
+              <FormControl isRequired >
                 <FormLabel>Property Type</FormLabel>
                 <Select placeholder="Select Property Type">
                   <option>Residential</option>
                   <option>Commercial</option>
                 </Select>
               </FormControl>
-              <FormControl>
+              <FormControl isRequired >
                 <FormLabel>External Factors</FormLabel>
                 <Textarea
                   placeholder="Describe all physical problems with your home that you believe impact your valuation.  Examples:  cracked foundation, old/damaged roof, non-hurricane impact windows/doors, pool leak, lack of updated rooms/kitchen, old HVAC systems, old/copper plumbing, dated electrical, damaged concrete, damaged driveway. "
                   noOfLines={3}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl isRequired >
                 <FormLabel>
                   External Factors Influencing your Property
                 </FormLabel>
@@ -128,46 +129,14 @@ export default function Steps() {
                   noOfLines={3}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl isRequired >
                 <FormLabel>Government Factors:</FormLabel>
                 <Textarea
                   placeholder="If applicable, do you currently have code violations, zoning violations, or other administrative matters associated with the property. "
                   noOfLines={3}
                 />
               </FormControl>
-            </Box>
-            <HStack w={"full"} flexDir={"row-reverse"}>
-              <PrimaryButton
-                title={"Next"}
-                onClick={() => setActiveStep(activeStep + 1)}
-              />
-              <PrimaryButton
-                title={"Back"}
-                onClick={() => setActiveStep(activeStep - 1)}
-              />
-            </HStack>
-          </VStack>
-        );
-      case 3:
-        return (
-          <VStack w={"100%"} h={"full"} justify={"space-between"}>
-            <Box w={"full"}>
-              <FormControl>
-                <FormLabel placeholder="Email">Email</FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl>
-                <FormLabel placeholder="Phone number">Tel</FormLabel>
-                <Input type="tel" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Best time to call </FormLabel>
-                <HStack>
-                  <Input type="date" />
-                  <Input type="time" />
-                </HStack>
-              </FormControl>
-            </Box>
+            </VStack>
             <HStack w={"full"} flexDir={"row-reverse"}>
               <PrimaryButton
                 title={"Submit"}
@@ -180,6 +149,7 @@ export default function Steps() {
             </HStack>
           </VStack>
         );
+
       default:
         return <></>;
     }
@@ -191,7 +161,7 @@ export default function Steps() {
       p={10}
       borderRadius={"lg"}
       w={{ base: "90vw", md: 400 }}
-      h={600}
+      h={650}
       boxShadow={"lg"}
       color="black"
     >

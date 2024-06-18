@@ -22,7 +22,8 @@ const faqs = [
 ];
 export default function FAQs() {
   return (
-    <Container spacing={5} maxW={"7xl"} p={{base:10,md:24}} >
+    <Box as="section" bg={"gray.50"} >
+    <Container  spacing={5} maxW={"7xl"} p={{base:10,md:24}} >
       <Heading2>FAQs</Heading2>
       <Accordion allowToggle my={10} >
         {faqs.map((faq, idx) => (
@@ -40,5 +41,6 @@ export default function FAQs() {
         ))}
       </Accordion>
     </Container>
+    </Box>
   );
 }

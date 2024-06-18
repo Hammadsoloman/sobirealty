@@ -1,51 +1,59 @@
  const regions = [
     {
-      name: "New York",
+      name: "Broward",
       url: "/",
       image: "/assets/regions/newyork.jpg",
     },
     {
-      name: "New York",
+      name: "Miami-Dade",
       url: "/",
        image: "/assets/regions/miami.jpg",
     },
     {
-      name: "New York",
+      name: "Glades",
       url: "/",
        image: "/assets/regions/michigan.jpg",
     },
     {
-      name: "New York",
+      name: "Hendry",
       url: "/",
        image: "/assets/regions/newyork.jpg",
     },
     {
-      name: "New York",
+      name: "Indian River",
       url: "/",
        image: "/assets/regions/miami.jpg",
     },
     {
-      name: "New York",
+      name: "Martin",
       url: "/",
        image: "/assets/regions/michigan.jpg",
     },
     {
-      name: "New York",
+      name: "Okeechobee",
       url: "/",
       image: "/assets/regions/los.jpg",
     },
     {
-      name: "New York",
+      name: "Palm Beach",
       url: "/",
       image: "/assets/regions/miami.jpg",
     },
     {
-      name: "New York",
+      name: "St Lucie",
       url: "/",
       image: "/assets/regions/los.jpg",
     },
     {
-      name: "New York",
+      name: "Monroe",
+      url: "/",
+      image: "/assets/regions/michigan.jpg",
+    },  {
+      name: "Brevard",
+      url: "/",
+      image: "/assets/regions/michigan.jpg",
+    },  {
+      name: "Alachua",
       url: "/",
       image: "/assets/regions/michigan.jpg",
     },
