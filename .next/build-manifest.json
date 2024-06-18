@@ -27,25 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/become-an-agent": [
+    "/sell": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/become-an-agent.js"
-    ],
-    "/buy": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/buy.js"
-    ],
-    "/property-tax-appeal": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/property-tax-appeal.js"
-    ],
-    "/realtor-ad-litem": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/realtor-ad-litem.js"
+      "static/chunks/pages/sell.js"
     ]
   },
   "ampFirstPages": []
