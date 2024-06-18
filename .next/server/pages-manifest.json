@@ -3,5 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/sell": "pages/sell.js"
+  "/sell": "pages/sell.js",
+  "/buy": "pages/buy.js",
+  "/home-search": "pages/home-search.js"
 }

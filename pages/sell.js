@@ -5,6 +5,7 @@ import Stats from "@/components/sell/Stats";
 import LeftImage from "@/components/sell/LeftImage";
 import RightImage from "@/components/sell/RightImage";
 import MiniStats from "@/components/sell/MiniStats";
+import Estimation from "@/components/sell/Estimation";
 export default function SellPage() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function SellPage() {
       <LeftImage/>
       <Properties />
       <MiniStats/>
+      <Estimation/>
     </>
   );
 }
