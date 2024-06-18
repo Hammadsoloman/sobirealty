@@ -24,7 +24,7 @@ export default function Ready() {
       <Container as={"section"} maxW={"4xl"} py={32}>
         <Heading2>Are you SOBIREALTY. ready?</Heading2>
         <Paragraph color={"white"}>
-          If you're interested in joining the greatest real estate brokerage in
+          If you are interested in joining the greatest real estate brokerage in
           the history of the world, fill out the form below so we can get back
           in touch with you.
         </Paragraph>
@@ -60,7 +60,7 @@ export default function Ready() {
             <Input />
           </FormControl>
           <FormControl>
-            <FormLabel>Region You're Interested in Joining</FormLabel>
+            <FormLabel>Region You Are Interested in Joining</FormLabel>
             <Select placeholder="Select option">
               <option>Miami</option>
               <option>Miami</option>
