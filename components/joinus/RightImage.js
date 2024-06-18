@@ -6,6 +6,7 @@ import Image from "next/image";
 import Heading3 from "../global/Heading3";
 import PrimaryButton from "../global/PrimaryButton";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Link from "next/link";
 
 export default function RightImage() {
   return (
@@ -27,7 +28,8 @@ export default function RightImage() {
           agent; you are a business. We recognize that and invest in your
           success, making your profitability our priority.
         </Paragraph>
-        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} />
+        <Link href={"/ready"}>
+        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} /></Link>
       </VStack>
       <Box borderRadius={"md"} overflow={"hidden"}>
         <Image

@@ -91,8 +91,8 @@ export default function Hero() {
           <br />
           Agent Icon
         </Heading>
-
-        <PrimaryButton title={" Join Us"} />
+        <Link href={"/ready"}>
+        <PrimaryButton title={" Join Us"} /></Link>
       </VStack>
     </Box>
   );

@@ -4,6 +4,7 @@ import Paragraph from "../global/Paragraph";
 import Heading2 from "../global/Heading2";
 import Image from "next/image";
 import Heading3 from "../global/Heading3";
+import Sticky from "react-stickynode";
 
 export default function StickyImage() {
   return (
@@ -15,13 +16,15 @@ export default function StickyImage() {
       spacing={10}
       pos={"relative"}
     >
-      <Box>
-        <Image
-          src={"/assets/regions/miami.jpg"}
-          alt=""
-          width={700}
-          height={700}
-        />
+      <Box >
+        <Box  pos={"sticky"} top={2} bottom={2} >
+          <Image
+            src={"/assets/regions/miami.jpg"}
+            alt=""
+            width={700}
+            height={700}
+          />
+        </Box>
       </Box>
       <VStack align={"flex-start"} spacing={10}>
         <Paragraph isBold>WHAT YOU CAN LOOK FORWARD TO</Paragraph>

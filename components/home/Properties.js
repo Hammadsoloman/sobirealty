@@ -80,7 +80,8 @@ export default function Properties() {
             </Link>
           ))}
       </SimpleGrid>
-      <PrimaryButton title={"View More"} icon={<MdOutlineArrowForwardIos />} />
+      <Link href={"/buy"}>
+      <PrimaryButton title={"View More"} icon={<MdOutlineArrowForwardIos />} /></Link>
     </Box>
   );
 }

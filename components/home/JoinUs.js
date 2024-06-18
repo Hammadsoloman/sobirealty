@@ -13,6 +13,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Background from "@/public/assets/bg1.png";
 import Image from "next/image";
 import PrimaryButton from "../global/PrimaryButton";
+import Link from "next/link";
 
 export default function JoinUs() {
   return (
@@ -56,8 +57,8 @@ export default function JoinUs() {
           Grow your business and brand with a brokerage that isn’t afraid of
           making the old guard uncomfortable.
         </Paragraph>
-
-        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} />
+<Link href={"/become-an-agent"}>
+        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} /></Link>
       </VStack>
     </SimpleGrid>
   );

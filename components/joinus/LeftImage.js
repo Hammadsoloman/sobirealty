@@ -6,6 +6,7 @@ import Image from "next/image";
 import Heading3 from "../global/Heading3";
 import PrimaryButton from "../global/PrimaryButton";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Link from "next/link";
 
 export default function LeftImage() {
   return (
@@ -36,7 +37,8 @@ export default function LeftImage() {
           mentorship is mutual, and wisdom is shared. It is not just about
           individual success; it is about collective growth.
         </Paragraph>
-        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} />
+        <Link href={"/ready"}>
+        <PrimaryButton title={"Join Us"} icon={<MdOutlineArrowForwardIos />} /></Link>
       </VStack>
     </SimpleGrid>
   );

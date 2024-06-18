@@ -30,14 +30,17 @@ export default function Hero() {
     >
       <Box
         w={"full"}
-        h="40vh"
+        h="60vh"
         backgroundImage={"url(/assets/home/broker.jpg)"}
         backgroundPosition={"center"}
         backgroundRepeat={"no-repeat"}
         backgroundSize={"cover"}
       />
       <Container maxW={"7xl"}>
-        <Heading1 title={"What is a Realtor Ad Litem"} />
+        <Heading1
+          title={"What is a Realtor Ad Litem"}
+          style={{ paddingBottom: 16 }}
+        />
         <Paragraph>
           During litigation the Court appoints a Realtor Ad Litem to act on
           behalf of the “property” or “business” when owners are unavailable or
@@ -49,10 +52,10 @@ export default function Hero() {
         </Paragraph>
       </Container>
 
-      <SimpleGrid columns={{ base: 1, md: 4 }} py={10} >
+      <SimpleGrid columns={{ base: 1, md: 4 }} py={10}>
         {Items.map((item, idx) => (
           <VStack key={idx}>
-            <Icon as={LuCheckCircle} w={16} h={16} color='green.500'/>
+            <Icon as={LuCheckCircle} w={16} h={16} color="green.500" />
             <Heading3> {item} </Heading3>
           </VStack>
         ))}

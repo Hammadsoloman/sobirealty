@@ -1,4 +1,3 @@
-
 import ContactUs from "@/components/home/ContactUs";
 import AboutMe from "@/components/realtor/AboutMe";
 import Content from "@/components/realtor/Content";
@@ -11,9 +10,9 @@ export default function RealtorAdLitem() {
   return (
     <>
       <Hero />
-<Services/>
-<AboutMe/>
-<ContactUs/>
+      <Services />
+      <AboutMe />
+      <ContactUs />
     </>
   );
 }
