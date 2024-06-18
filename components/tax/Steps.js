@@ -43,6 +43,7 @@ import { useEffect, useState } from "react";
 import PlaceAutocomplete from "../global/PlaceAutocomplete";
 import { usePlacesWidget } from "react-google-autocomplete";
 import { useFormik, FieldArray, FormikProvider } from "formik";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 const steps = [
   {
     title: "Locate My Property",
@@ -61,7 +62,7 @@ export default function Steps() {
   const formik = useFormik({
     initialValues: {
       address: "",
-      email: "",
+      email: process.env.NODE_ENV === "development" ? "" : "test@test.com",
       tel: "",
       dateToCall: "",
       timeToCall: "",
@@ -71,8 +72,12 @@ export default function Steps() {
       governmentFactors: "",
     },
     validationSchema: Yup.object({
-      address: Yup.string()
-        .max(500, "Must be 500 characters or less")
+      address: Yup.object()
+      // .shape({
+      //   value: Yup.string().nullable(),
+      //   label: Yup.string(),
+      // })
+        .nullable()
         .required("Required"),
       email: Yup.string().email().required("Required"),
       tel: Yup.number().required("Required"),
@@ -93,16 +98,6 @@ export default function Steps() {
     index: 1,
     count: steps.length,
   });
-  const [address, setAddress] = useState(null);
-
-  const { ref } = usePlacesWidget({
-    apiKey: process.env.GOOGLE_MAPS_API_KEY,
-    onPlaceSelected: (place) => {
-      console.log(place, "ll");
-
-      // setAddress(place);
-    },
-  });
 
   const [isStep1Valid, setIsStep1Valid] = useState(false);
   useEffect(() => {
@@ -122,6 +117,8 @@ export default function Steps() {
     formik.values.dateToCall,
     formik.values.timeToCall,
   ]);
+
+  console.log(formik.values.address)
   return (
     <VStack
       bg={"white"}
@@ -135,7 +132,6 @@ export default function Steps() {
       as={"form"}
       onSubmit={formik.handleSubmit}
     >
-    
       <Stepper
         index={activeStep}
         // orientation={"vertical"}
@@ -171,11 +167,22 @@ export default function Steps() {
               isInvalid={formik.touched.address && formik.errors.address}
             >
               <FormLabel htmlFor="address">Address</FormLabel>
-              <Input
+              <GooglePlacesAutocomplete
+                apiKey={process.env.GOOGLE_MAPS_API_KEY}
+                apiOptions={{ language: "en", region: "us" }}
+                selectProps={{
+                  value: formik.values.address,
+                  onChange: (v) => {
+                    console.log(v);
+                    formik.setFieldValue("address", v);
+                  },
+                }}
+              />
+              {/*  <Input
                 ref={ref}
                 id="address"
                 {...formik.getFieldProps("address")}
-              />
+      />*/}
               <FormErrorMessage>{formik.errors.address}</FormErrorMessage>
             </FormControl>
             <FormControl
@@ -347,8 +354,12 @@ export default function Steps() {
 }
 
 const StepOneValidation = Yup.object({
-  address: Yup.string()
-    .max(500, "Must be 500 characters or less")
+  address: Yup.object()
+   // .shape({
+   //   value: Yup.string().nullable(),
+   //   label: Yup.string(),
+   // })
+    .nullable()
     .required("Required"),
   email: Yup.string().email().required("Required"),
   tel: Yup.number().required("Required"),
