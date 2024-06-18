@@ -62,7 +62,7 @@ export default function Steps() {
   const formik = useFormik({
     initialValues: {
       address: "",
-      email: process.env.NODE_ENV === "development" ? "" : "test@test.com",
+      email: "",
       tel: "",
       dateToCall: "",
       timeToCall: "",
@@ -73,10 +73,10 @@ export default function Steps() {
     },
     validationSchema: Yup.object({
       address: Yup.object()
-      // .shape({
-      //   value: Yup.string().nullable(),
-      //   label: Yup.string(),
-      // })
+        // .shape({
+        //   value: Yup.string().nullable(),
+        //   label: Yup.string(),
+        // })
         .nullable()
         .required("Required"),
       email: Yup.string().email().required("Required"),
@@ -118,7 +118,7 @@ export default function Steps() {
     formik.values.timeToCall,
   ]);
 
-  console.log(formik.values.address)
+  console.log(formik.values.address);
   return (
     <VStack
       bg={"white"}
@@ -176,6 +176,8 @@ export default function Steps() {
                     console.log(v);
                     formik.setFieldValue("address", v);
                   },
+                  placeholder: "Select location",
+                  isClearable:true
                 }}
               />
               {/*  <Input
@@ -355,10 +357,10 @@ export default function Steps() {
 
 const StepOneValidation = Yup.object({
   address: Yup.object()
-   // .shape({
-   //   value: Yup.string().nullable(),
-   //   label: Yup.string(),
-   // })
+    // .shape({
+    //   value: Yup.string().nullable(),
+    //   label: Yup.string(),
+    // })
     .nullable()
     .required("Required"),
   email: Yup.string().email().required("Required"),
