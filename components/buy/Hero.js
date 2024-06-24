@@ -15,10 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-
 import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 import Image from "next/image";
 import PrimaryButton from "../global/PrimaryButton";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -29,8 +29,8 @@ export default function Hero() {
       color={"white"}
       overflow={"hidden"}
     >
-      <Box  zIndex={-1} width={"100vw"}>
-        <Image src={HeroBackgroundImage} alt="" style={{minWidth:"100%"}} />
+      <Box zIndex={-1} width={"100vw"}>
+        <Image src={HeroBackgroundImage} alt="" style={{ minWidth: "100%" }} />
       </Box>
       <Box
         pos={"absolute"}
@@ -49,11 +49,20 @@ export default function Hero() {
         justify={"center"}
         align={"center"}
       >
-        <Heading as={"h1"}    fontSize={{ base: "4xl", md: "6xl" }} textAlign={"center"}>
+        <Heading
+          as={"h1"}
+          fontSize={{ base: "4xl", md: "6xl" }}
+          textAlign={"center"}
+        >
           Your New Home <br />
           Awaits
         </Heading>
-        <PrimaryButton title={" Explore Our Properties"} icon={<MdKeyboardArrowDown />} />
+        <Link href={"/buy#our-properties"}>
+          <PrimaryButton
+            title={" Explore Our Properties"}
+            icon={<MdKeyboardArrowDown />}
+          />
+        </Link>
       </VStack>
     </Box>
   );

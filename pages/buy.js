@@ -10,7 +10,7 @@ export default function BuyPage() {
       <Hero />
       <Regions />
       <AllProperties />
-      <ContactUs />
+      <ContactUs defaultTopic="Buying" />
     </>
   );
 }

@@ -54,7 +54,7 @@ url(${backgroundImage})`,
             spacing={{ base: 4, md: 10 }}
           >
             {regions.map((region, idx) => (
-              <Link key={idx} href={"/"}>
+              <Link key={idx} href={region.url}>
                 <HStack
                   fontWeight={"bold"}
                   justify={"space-between"}

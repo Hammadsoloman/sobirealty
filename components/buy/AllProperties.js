@@ -40,7 +40,7 @@ export default function AllProperties() {
     <Box as="section">
       <Heading2>Featured Properties</Heading2>
       <Box h={10} />
-
+      
       <IDX />
       {/* <HStack justify={"space-between"}>
         <Heading2>Featured Properties</Heading2>

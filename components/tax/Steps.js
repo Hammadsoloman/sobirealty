@@ -118,7 +118,7 @@ export default function Steps() {
     formik.values.timeToCall,
   ]);
 
-  console.log(formik.values.address);
+ 
   return (
     <VStack
       bg={"white"}
@@ -283,6 +283,9 @@ export default function Steps() {
                 <option value={"Residential"}>Residential</option>
                 <option value={"Commercial"}>Commercial</option>
               </Select>
+              <FormErrorMessage>
+                {formik.errors.propertType}
+              </FormErrorMessage>
             </FormControl>
             <FormControl
               isInvalid={

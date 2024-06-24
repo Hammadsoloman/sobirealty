@@ -13,9 +13,11 @@ function MyApp({ Component, pageProps }) {
           :root {
             --font-montserrat: ${fonts.montserrat.style.fontFamily};
           }
+          html {
+            scroll-behavior: smooth;
+          }
           .stickyElem {
             transition: all 1s ease;
-           
           }
           .zoom {
             transition: all 1s ease;
@@ -27,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           }
         `}
       </style>
-      <ChakraProvider  theme={theme}>
+      <ChakraProvider theme={theme}>
         <Nav />
         <Component {...pageProps} />
         <Footer />

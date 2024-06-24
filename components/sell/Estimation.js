@@ -21,7 +21,7 @@ export default function Estimation() {
           NEWSLETTER The Best Minds inReal Estate
         </Heading2>
         <Paragraph color={"white"}>
-          Get the latest from the SERHANT. Universe directly into your inbox.
+          Get the latest from the SOBIREALTY. Universe directly into your inbox.
         </Paragraph>
         <PrimaryButton title={"Sign Up"} />
       </VStack>
@@ -30,7 +30,7 @@ export default function Estimation() {
         <Paragraph>HOME VALUATION</Paragraph>
         <Heading2>How Much Is My Property Worth</Heading2>
         <Paragraph>
-          Get your free valuation report and connect with a SERHANT. Agent to
+          Get your free valuation report and connect with a SOBIREALTY. Agent to
           talk about your home.
         </Paragraph>
         <PrimaryButton title={"Get Estimate"} />

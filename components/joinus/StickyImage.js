@@ -34,14 +34,14 @@ export default function StickyImage() {
           size. In a market where every edge counts, backing yourself with the
           most followed real estate brand in the world elevates you to a level
           most only dream of reaching. High-value transactions await, and
-          SERHANT. is the key to helping you unlock them.
+          SOBIREALTY. is the key to helping you unlock them.
         </Paragraph>
         <Heading3>Experience Exponential Growth in Lead Generation</Heading3>
         <Paragraph>
           Take control of your narrative with our suite of unique,
           industry-leading services, including a full-scale in-house studio for
           your branding needs. Gain unparalleled authority and credibility,
-          because when you succeed, we all do. With SERHANT., you&apos;re not
+          because when you succeed, we all do. With SOBIREALTY., you&apos;re not
           just growing a brand; you&apos;re building an empire.
         </Paragraph>
         <Heading3>
@@ -51,7 +51,7 @@ export default function StickyImage() {
           Why let cumbersome processes eat away your valuable time? Our
           state-of-the-art technology cuts hours off your workflow. Spend your
           time where it matters most: closing deals and providing exceptional
-          service. At SERHANT., our technology and people serve you, not the
+          service. At SOBIREALTY., our technology and people serve you, not the
           other way around.
         </Paragraph>
         <Heading3>

@@ -27,11 +27,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/buy.js"
     ],
-    "/home-search": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/home-search.js"
-    ],
     "/sell": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

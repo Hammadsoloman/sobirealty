@@ -30,7 +30,7 @@ export default function Stats() {
             fontSize={{ base: "2xl", md: "4xl" }}
             color={"brand.primary"}
           >
-            WHY EVERYONE IS SELLING WITH SERHANT.
+            WHY EVERYONE IS SELLING WITH SOBIREALTY.
           </Paragraph>
         </VStack>
         <Stack

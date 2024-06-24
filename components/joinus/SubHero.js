@@ -18,7 +18,7 @@ export default function SubHero() {
       </VStack>
       <Paragraph>
         Don&lsquo;t just join another brokerage; become part of a revolution.
-        The SERHANT Difference is an ecosystem designed for ambitious, driven,
+        The SOBIREALTY Difference is an ecosystem designed for ambitious, driven,
         and forward-thinking luxury real estate agents like you. The future of
         real estate is here—don&lsquo;t miss your opportunity to be a part of
         it.

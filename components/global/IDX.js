@@ -3,6 +3,7 @@ export default function IDX() {
   return (
     <Box h={"100vh"}>
       <Box
+        id="our-properties"
         as="iframe"
         src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ee201aac"
         allowfullscreen

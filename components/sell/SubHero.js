@@ -38,7 +38,7 @@ export default function SubHero() {
         </Paragraph>
         </Box>
         <Paragraph color={"black"} >
-          Work with a dedicated SERHANT. agent who will listen to your needs and
+          Work with a dedicated SOBIREALTY. agent who will listen to your needs and
           goals, use data and creativity to optimize your property for potential
           buyers, and stand beside you for every step of the selling process. We
           welcome expectations because we hold ourselves to the highest standard

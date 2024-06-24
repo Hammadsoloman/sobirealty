@@ -13,12 +13,13 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdOutlineArrowForwardIos } from "react-icons/md";
 
 import HeroBackgroundImage from "@/public/assets/regions/los.jpg";
 import Image from "next/image";
 import Paragraph from "../global/Paragraph";
 import PrimaryButton from "../global/PrimaryButton";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -59,7 +60,9 @@ export default function Hero() {
         <Paragraph color="white" isCentred>
           Receive a free home valuation from one of our property experts.
         </Paragraph>
-        <HStack
+        <Link href={"#contact-us"}>
+        <PrimaryButton title={"Sell You Property"} icon={<MdOutlineArrowForwardIos />} /></Link>
+    {/*    <HStack
           bg={"white"}
           color={"black"}
           px={10}
@@ -72,7 +75,7 @@ export default function Hero() {
           <Input placeholder="Enter your home address" size={"md"} />
 
           <PrimaryButton title={"Continue"} />
-        </HStack>
+  </HStack>*/}
       </VStack>
     </Box>
   );

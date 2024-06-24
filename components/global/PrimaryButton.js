@@ -1,12 +1,19 @@
 import { Button } from "@chakra-ui/react";
 
-export default function PrimaryButton({ title, icon,isDisabled=false,onClick ,type="button"}) {
+export default function PrimaryButton({
+  title,
+  icon,
+  isDisabled = false,
+  onClick,
+  type = "button",
+  isLoading
+}) {
   return (
     <Button
       rightIcon={icon}
       rounded="3xl"
       style={{ textDecoration: "none" }}
-      border={"none"}     
+      border={"none"}
       color={"white"}
       bg={"brand.primary"}
       _hover={{
@@ -15,6 +22,7 @@ export default function PrimaryButton({ title, icon,isDisabled=false,onClick ,ty
       onClick={onClick}
       isDisabled={isDisabled}
       type={type}
+      isLoading={isLoading}
     >
       {title}
     </Button>

@@ -6,6 +6,7 @@ import LeftImage from "@/components/sell/LeftImage";
 import RightImage from "@/components/sell/RightImage";
 import MiniStats from "@/components/sell/MiniStats";
 import Estimation from "@/components/sell/Estimation";
+import ContactUs from "@/components/home/ContactUs";
 export default function SellPage() {
   return (
     <>
@@ -17,7 +18,8 @@ export default function SellPage() {
       <LeftImage/>
       <Properties />
       <MiniStats/>
-      <Estimation/>
+      {/*<Estimation/>*/}
+      <ContactUs defaultTopic="Selling" />
     </>
   );
 }

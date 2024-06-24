@@ -1,60 +1,60 @@
  const regions = [
     {
       name: "Broward",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/newyork.jpg",
     },
     {
       name: "Miami-Dade",
-      url: "/",
+      url: "/buy#our-properties",
        image: "/assets/regions/miami.jpg",
     },
     {
       name: "Glades",
-      url: "/",
+      url: "/buy#our-properties",
        image: "/assets/regions/michigan.jpg",
     },
     {
       name: "Hendry",
-      url: "/",
+      url: "/buy#our-properties",
        image: "/assets/regions/newyork.jpg",
     },
     {
       name: "Indian River",
-      url: "/",
+      url: "/buy#our-properties",
        image: "/assets/regions/miami.jpg",
     },
     {
       name: "Martin",
-      url: "/",
+      url: "/buy#our-properties",
        image: "/assets/regions/michigan.jpg",
     },
     {
       name: "Okeechobee",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/los.jpg",
     },
     {
       name: "Palm Beach",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/miami.jpg",
     },
     {
       name: "St Lucie",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/los.jpg",
     },
     {
       name: "Monroe",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/michigan.jpg",
     },  {
       name: "Brevard",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/michigan.jpg",
     },  {
       name: "Alachua",
-      url: "/",
+      url: "/buy#our-properties",
       image: "/assets/regions/michigan.jpg",
     },
   ];

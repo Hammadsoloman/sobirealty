@@ -21,9 +21,9 @@ export default function RightImage() {
     >
       <VStack align={"flex-start"} spacing={10} justify={"center"}>
         <Paragraph isBold>EARN MORE</Paragraph>
-        <Heading3>Increase Your Earning Potential at SERHANT.</Heading3>
+        <Heading3>Increase Your Earning Potential at SOBIREALTY.</Heading3>
         <Paragraph>
-          Discover your true earning potential at SERHANT., where agents earn on
+          Discover your true earning potential at SOBIREALTY., where agents earn on
           average four times more than industry standards.* You are not just an
           agent; you are a business. We recognize that and invest in your
           success, making your profitability our priority.
