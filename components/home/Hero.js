@@ -94,7 +94,7 @@ export default function Hero() {
           >
             IN-HOUSE TITLE COMPANY
           </Text>
-          <HStack
+     {/*     <HStack
             bg={"white"}
             color={"black"}
             px={{ base: 4, md: 10 }}
@@ -124,7 +124,7 @@ export default function Hero() {
                 bg: "brand.secondary",
               }}
             />
-          </HStack>
+            </HStack>*/}
         </VStack>
       </Box>
     </Box>
