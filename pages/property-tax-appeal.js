@@ -1,16 +1,19 @@
 import Hero from "@/components/tax/Hero";
 import FAQs from "@/components/tax/FAQs";
 import HowItWorks from "@/components/tax/HowItWorks";
-import Script from "next/script";
+import { NextSeo } from "next-seo";
 
 export default function PropertyTaxAppeal() {
   return (
     <>
-   
+      <NextSeo
+        title="Property Tax Appeal | SOBIREALTY"
+        description="Property Tax Appeal | SOBIREALTY"
+      />
       <Hero />
-      <HowItWorks/>
-    {/*  <Steps/>*/}
-      <FAQs/>
+      <HowItWorks />
+      {/*  <Steps/>*/}
+      <FAQs />
     </>
   );
 }

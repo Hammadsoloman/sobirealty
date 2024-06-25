@@ -5,19 +5,24 @@ import Stats from "@/components/sell/Stats";
 import LeftImage from "@/components/sell/LeftImage";
 import RightImage from "@/components/sell/RightImage";
 import MiniStats from "@/components/sell/MiniStats";
-import Estimation from "@/components/sell/Estimation";
+
 import ContactUs from "@/components/home/ContactUs";
+import { NextSeo } from "next-seo";
 export default function SellPage() {
   return (
     <>
+      <NextSeo
+        title="Sell Property | SOBIREALTY"
+        description="Sell Property | SOBIREALTY"
+      />
       <Hero />
       <SubHero />
       <Stats />
-      <LeftImage/>
-      <RightImage/>
-      <LeftImage/>
+      <LeftImage />
+      <RightImage />
+      <LeftImage />
       <Properties />
-      <MiniStats/>
+      <MiniStats />
       {/*<Estimation/>*/}
       <ContactUs defaultTopic="Selling" />
     </>

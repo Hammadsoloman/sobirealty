@@ -5,22 +5,21 @@ import JoinUs from "@/components/home/JoinUs";
 import Stats from "@/components/home/Stats";
 import Marquees from "@/components/home/Marquee";
 import ContactUs from "@/components/home/ContactUs";
-import RightImage from "@/components/home/RightImage";
-import Services from "@/components/home/Services";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <>
+      <NextSeo title="Home | SOBIREALTY" description="Home | SOBIREALTY" />
       <Hero />
-{/*      <RightImage/>
+      {/*      <RightImage/>
       <Services/>*/}
-      <Regions/>
-      <Properties/>
-      <JoinUs/>
-      <Marquees/>
-      <Stats/>
-   
-      <ContactUs/>
+      <Regions />
+      <Properties />
+      <JoinUs />
+      <Marquees />
+      <Stats />
+      <ContactUs />
     </>
   );
 }

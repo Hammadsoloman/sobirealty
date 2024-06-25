@@ -55,8 +55,8 @@ export default function SmallCentered() {
         align={'center'}>
         <Link href={"/"}>
             <Image
-              src={"/assets/logo.svg"}
-              width={80}
+              src={"/assets/logo.png"}
+              width={100}
               height={200}
               alt="SOBIREALTY"
             />
@@ -82,7 +82,7 @@ export default function SmallCentered() {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Text>© {new Date().getFullYear()} SOBI REALTY. All rights reserved</Text>
-          <Stack direction={'row'} spacing={6}>
+          <Stack direction={'row'} spacing={6} color={"brand.primary"} >
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>

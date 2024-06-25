@@ -97,8 +97,8 @@ export default function Nav() {
         <HStack as="nav" justify={"space-between"} align={"flex-start"}>
           <Link href={"/"}>
             <Image
-              src={"/assets/logo.svg"}
-              width={80}
+              src={"/assets/logo2.png"}
+              width={200}
               height={200}
               alt="SOBIREALTY"
             />
@@ -220,7 +220,7 @@ export default function Nav() {
         {!isCollapsed && (
           <SimpleGrid columns={2}>
             <Box pr={{ base: 2, md: 16 }} pt={5} >
-              <Image src={"/assets/logo.svg"} alt="" width={700} height={500} />
+              <Image src={"/assets/logo.png"} alt="" width={600} height={500} />
             </Box>
             <VStack
               justify={"center"}

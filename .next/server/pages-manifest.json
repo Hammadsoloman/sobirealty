@@ -3,7 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/buy": "pages/buy.js",
-  "/property-tax-appeal": "pages/property-tax-appeal.js",
-  "/realtor-ad-litem": "pages/realtor-ad-litem.js"
+  "/buy": "pages/buy.js"
 }
