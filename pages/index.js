@@ -6,6 +6,7 @@ import Stats from "@/components/home/Stats";
 import Marquees from "@/components/home/Marquee";
 import ContactUs from "@/components/home/ContactUs";
 import { NextSeo } from "next-seo";
+import IDX from "@/components/global/IDX";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       {/*      <RightImage/>
       <Services/>*/}
       <Regions />
-      <Properties />
+      {/*<Properties />*/}
+      <IDX/>
       <JoinUs />
       <Marquees />
       <Stats />

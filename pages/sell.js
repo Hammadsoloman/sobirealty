@@ -8,6 +8,7 @@ import MiniStats from "@/components/sell/MiniStats";
 
 import ContactUs from "@/components/home/ContactUs";
 import { NextSeo } from "next-seo";
+import IDX from "@/components/global/IDX";
 export default function SellPage() {
   return (
     <>
@@ -21,7 +22,8 @@ export default function SellPage() {
       <LeftImage />
       <RightImage />
       <LeftImage />
-      <Properties />
+      {/*   <Properties />*/}
+      <IDX />
       <MiniStats />
       {/*<Estimation/>*/}
       <ContactUs defaultTopic="Selling" />
